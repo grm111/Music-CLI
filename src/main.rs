@@ -57,7 +57,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             }
         }
     }
-    let name = "audio-engine".to_ns_name::<GenericNamespaced>().unwrap(); //ai function
+    let name = "audio-engine".to_ns_name::<GenericNamespaced>().unwrap();
 
     let mut stream = loop {
         match LocalSocketStream::connect(name.clone()) {
@@ -166,7 +166,6 @@ fn normal_search(search_arg: &String, directory: &PathBuf) -> Result<PathBuf, st
         .collect::<Vec<_>>();
 
     Ok(cheating)
-
 }
 
 fn fuzzy_search(search_arg: &String) -> Option<PathBuf> {
